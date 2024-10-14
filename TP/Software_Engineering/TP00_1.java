@@ -121,77 +121,112 @@ public class TP00_1 {
 
   public static void main(String[] args) {
     // Test Case 1: Valid Reservation
-    try {
-      Reservation res1 = new Reservation("F-209", "Meng Hour", LocalDateTime.of(2024, 11, 1, 0, 0, 0),
-          LocalDateTime.of(2024, 11, 3, 0, 0, 0));
-      reservation.add(res1);
-      System.out.println("Reservation created for: " + res1.getUserName() + " in room " + res1.getRoomNum());
-    } catch (Exception e) {
-      System.out.println("Error: " + e.getMessage());
-    }
+    // try {
+    //   Reservation res1 = new Reservation("F-209", "Meng Hour", LocalDateTime.of(2024, 11, 1, 0, 0, 0),
+    //       LocalDateTime.of(2024, 11, 3, 0, 0, 0));
+    //   reservation.add(res1);
+    //   System.out.println("Reservation created for: " + res1.getUserName() + " in room " + res1.getRoomNum());
+    // } catch (Exception e) {
+    //   System.out.println("Error: " + e.getMessage());
+    // }
 
     // Test Case 2: Invalid Room Number
-    try {
-      Reservation res2 = new Reservation("209", "Jane Doe", LocalDateTime.of(2024, 12, 1, 0, 0, 0),
-          LocalDateTime.of(2024, 12, 2, 0, 0, 0));
-      System.out.println("Reservation created for: " + res2.getUserName() + " in room " + res2.getRoomNum());
-    } catch (Exception e) {
-      System.out.println("Error: " + e.getMessage());
-    }
+    // try {
+    //   Reservation res2 = new Reservation("209", "Jane Doe", LocalDateTime.of(2024, 12, 1, 0, 0, 0),
+    //       LocalDateTime.of(2024, 12, 2, 0, 0, 0));
+    //   System.out.println("Reservation created for: " + res2.getUserName() + " in room " + res2.getRoomNum());
+    // } catch (Exception e) {
+    //   System.out.println("Error: " + e.getMessage());
+    // }
 
     // Test Case 3: Empty User Name
-    try {
-      Reservation res3 = new Reservation("J-704", "", LocalDateTime.of(2024, 12, 1, 0, 0, 0),
-          LocalDateTime.of(2024, 12, 2, 0, 0, 0));
-      System.out.println("Reservation created for: " + res3.getUserName() + " in room " + res3.getRoomNum());
-    } catch (Exception e) {
-      System.out.println("Error: " + e.getMessage());
-    }
+    // try {
+    //   Reservation res3 = new Reservation("J-704", "", LocalDateTime.of(2024, 12, 1, 0, 0, 0),
+    //       LocalDateTime.of(2024, 12, 2, 0, 0, 0));
+    //   System.out.println("Reservation created for: " + res3.getUserName() + " in room " + res3.getRoomNum());
+    // } catch (Exception e) {
+    //   System.out.println("Error: " + e.getMessage());
+    // }
 
     // Test Case 4: User Name with No Vowel
-    try {
-      Reservation res4 = new Reservation("J-704", "Rhythm", LocalDateTime.of(2024, 12, 1, 0, 0, 0),
-          LocalDateTime.of(2024, 12, 2, 0, 0, 0));
-      System.out.println("Reservation created for: " + res4.getUserName() + " in room " + res4.getRoomNum());
-    } catch (Exception e) {
-      System.out.println("Error: " + e.getMessage());
-    }
+    // try {
+    //   Reservation res4 = new Reservation("J-704", "Rhythm", LocalDateTime.of(2024, 12, 1, 0, 0, 0),
+    //       LocalDateTime.of(2024, 12, 2, 0, 0, 0));
+    //   System.out.println("Reservation created for: " + res4.getUserName() + " in room " + res4.getRoomNum());
+    // } catch (Exception e) {
+    //   System.out.println("Error: " + e.getMessage());
+    // }
 
     // Test Case 5: Check-in Time in the Past
-    try {
-      Reservation res5 = new Reservation("G-305", "Anna Lee", LocalDateTime.of(2022, 11, 1, 0, 0, 0),
-          LocalDateTime.of(2024, 11, 3, 0, 0, 0));
-      System.out.println("Reservation created for: " + res5.getUserName() + " in room " + res5.getRoomNum());
-    } catch (Exception e) {
-      System.out.println("Error: " + e.getMessage());
-    }
+    // try {
+    //   Reservation res5 = new Reservation("G-305", "Anna Lee", LocalDateTime.of(2022, 11, 1, 0, 0, 0),
+    //       LocalDateTime.of(2024, 11, 3, 0, 0, 0));
+    //   System.out.println("Reservation created for: " + res5.getUserName() + " in room " + res5.getRoomNum());
+    // } catch (Exception e) {
+    //   System.out.println("Error: " + e.getMessage());
+    // }
 
     // Test Case 6: Check-out Time Less Than 1 Hour After Check-in
-    try {
-      Reservation res6 = new Reservation("H-101", "Steve Black", LocalDateTime.of(2024, 11, 1, 10, 0, 0),
-          LocalDateTime.of(2024, 11, 1, 10, 30, 0)); // Less than 1 hour difference
-      System.out.println("Reservation created for: " + res6.getUserName() + " in room " + res6.getRoomNum());
-    } catch (Exception e) {
-      System.out.println("Error: " + e.getMessage());
+    // try {
+    //   Reservation res6 = new Reservation("H-101", "Steve Black", LocalDateTime.of(2024, 11, 1, 10, 0, 0),
+    //       LocalDateTime.of(2024, 11, 1, 10, 30, 0)); // Less than 1 hour difference
+    //   System.out.println("Reservation created for: " + res6.getUserName() + " in room " + res6.getRoomNum());
+    // } catch (Exception e) {
+    //   System.out.println("Error: " + e.getMessage());
+    // }
+
+    // listReservation();
+
+    // addNewReservation();
+
+    // listReservation();
+
+    // removeReservation();
+
+    // listReservation();
+
+    // updateReservation();
+
+    // listReservation();
+
+    // swapRooms();
+
+    // listReservation();
+
+    while (true) {
+      menu();
+
+      System.out.println("Choose number from 1-6:");
+      int input = scanner.nextInt();
+      scanner.nextLine();
+
+      if (input == 1) {
+        listReservation();
+      } else if (input == 2) {
+        addNewReservation();
+      } else if (input == 3) {
+        removeReservation();
+      } else if (input == 4) {
+        updateReservation();
+      } else if (input == 5) {
+        swapRooms();
+      } else if (input == 6) {
+        System.out.println("Exiting...");
+        break;
+      } else {
+        System.out.println("Number must be from 1-6");
+      }
     }
+  }
 
-    listReservation();
-
-    addNewReservation();
-
-    listReservation();
-
-    removeReservation();
-
-    listReservation();
-
-    updateReservation();
-
-    listReservation();
-
-    swapRooms();
-
-    listReservation();
+  public static void menu(){
+    System.out.println("\n*** Menu ***");
+    System.out.println("1. List all reservations");
+    System.out.println("2. Add new resevations");
+    System.out.println("3. Cancel/Remove reservation");
+    System.out.println("4. Update reservation");
+    System.out.println("5. Swap room between two reservations");
+    System.out.println("6. Exit");
   }
 
   public static void listReservation() {

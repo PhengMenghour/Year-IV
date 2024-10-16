@@ -350,7 +350,7 @@ public class TP00_1 {
           System.out.println("Enter new Check-out or press Enter to keep [" + toUpdate.getCheckOut() + "]:");
           String checkOutStr = scanner.nextLine();
           if (!checkOutStr.isEmpty()) {
-            LocalDateTime checkOut = LocalDateTime.parse(checkInStr, formatter);
+            LocalDateTime checkOut = LocalDateTime.parse(checkOutStr, formatter);
             toUpdate.setCheckOut(checkOut);
           }
 
@@ -391,6 +391,7 @@ public class TP00_1 {
         }
       }
 
+    
       // Check if both reservations have the same check-in and check-out times
       if (res1.getCheckIn().equals(res2.getCheckIn()) && res1.getCheckOut().equals(res2.getCheckOut())){
         // Swap room numbers

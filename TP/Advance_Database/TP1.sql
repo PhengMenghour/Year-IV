@@ -3,7 +3,11 @@ use classicmodels;
 show tables;
 describe customers;
 describe employees;
-select *from customers;
+describe productlines;
+describe products;
+
+select * from customers;
+select * from productlines;
 
 -- 1. Show first name and last name of customer from France.
 SELECT contactFirstName, contactLastName
@@ -35,7 +39,9 @@ SELECT
 	CASE
 		WHEN creditLimit > 80000 THEN "VIP"
         WHEN creditLimit < 80000 THEN "Normal"
-	END
+	END AS status
 FROM customers;
+
+-- 6. Show all product which is in “classic car” product line.
 
 

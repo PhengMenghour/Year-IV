@@ -14,7 +14,13 @@ public class TP01_2 {
             public void nativeKeyPressed(NativeKeyEvent arg0) {
                 if (arg0.getKeyCode() == NativeKeyEvent.VC_ENTER) {
                     isRunning = false;
-                    return;
+                    try {
+                        GlobalScreen.unregisterNativeHook();
+                    } catch (NativeHookException e) {
+                        // TODO: handle exception
+                        e.printStackTrace();
+                        System.exit(1);
+                    }
                 }
                 message = NativeKeyEvent.getKeyText(arg0.getKeyCode()).toLowerCase();
 
